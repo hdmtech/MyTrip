@@ -1,0 +1,234 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+    background: #f5f6fa;
+    min-height: 100%;
+}
+
+.login-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f6fa;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.login-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 40px 32px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 340px;
+    position: relative;
+}
+.login-card h1 {
+    margin-bottom: 32px;
+    font-size: 2.2rem;
+    color: #2563eb;
+    font-weight: bold;
+}
+.login-logo {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto -40px auto !important;
+    margin-top: -35px !important;
+}
+.login-title {
+    font-size: 3.0rem !important;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0 !important;
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+    color: #00acc0;
+}
+.login-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 14px;
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+    border: 1.5px solid #b0c4de;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.2s;
+    background: #f8fafc;
+}
+.login-input:focus {
+    border: 1.5px solid #00acc0;
+    background: #fff;
+}
+.login-card button[type="submit"],
+.login-card #registerBtn,
+.login-card #guestBtn {
+    width: 100%;
+    padding: 14px 0;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.login-card button[type="submit"]:hover,
+.login-card #registerBtn:hover,
+.login-card #guestBtn:hover {
+    background: #1d4ed8;
+}
+
+/* 회원가입 팝업 */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 40px 32px 32px 32px;
+    min-width: 340px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-content h2 {
+    margin-bottom: 32px;
+    font-size: 2.2rem;
+    color: #2563eb;
+    font-weight: bold;
+}
+.modal-content input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 14px;
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+    border: 1.5px solid #b0c4de;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.2s;
+    background: #f8fafc;
+}
+.modal-content input:focus {
+    border: 1.5px solid #00acc0;
+    background: #fff;
+}
+.modal-content button {
+    width: 100%;
+    padding: 14px 0;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.modal-content button:hover {
+    background: #1d4ed8;
+}
+.close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+}
+
+button#registerBtn.register-btn {
+    appearance: none !important;
+    background: #fff !important;
+    border: 1.2px solid #2563eb !important;
+    box-shadow: none !important;
+    outline: none !important;
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    padding: 4px 8px !important;
+    font-size: 0.9rem !important;
+    border-radius: 10px !important;
+    color: #2563eb !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: background 0.2s, color 0.2s !important;
+    z-index: 2 !important;
+    text-align: center !important;
+    display: block !important;
+    width: auto !important;
+    min-width: 80px !important;
+    max-width: 120px !important;
+    height: auto !important;
+    line-height: normal !important;
+    margin: -14px 0 4px auto !important;
+}
+button#registerBtn.register-btn:hover {
+    background: #2563eb !important;
+    color: #fff !important;
+}
+.guest-link {
+    appearance: none !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    display: block !important;
+    width: auto !important;
+    min-width: 0 !important;
+    color: #2563eb !important;
+    font-size: 1rem !important;
+    margin-top: 1px !important;
+    margin-bottom: -20px !important;
+    cursor: pointer;
+    text-decoration: none !important;
+    font-weight: normal;
+    transition: color 0.2s;
+    text-align: center;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    float: none;
+}
+.guest-link:hover {
+    color: #1d4ed8 !important;
+    text-decoration: underline;
+}
+
+.login-footer {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    text-align: center;
+    padding: 10px 0;
+    color: #6b7280;
+    font-size: 1.2rem;
+    border-top: 1px solid #e5e7eb;
+    background: #fff;
+    border-radius: 0 0 18px 18px;
+    margin-top: 50px;
+}
+.login-footer p {
+    margin: 0;
+    font-weight: normal;
+} 

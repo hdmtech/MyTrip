@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Main-Class: org.springframework.boot.loader.launch.WarLauncher
+Start-Class: com.hyservice.mytrip.MyTripApplication
+Spring-Boot-Version: 3.5.3
+Spring-Boot-Classes: WEB-INF/classes/
+Spring-Boot-Lib: WEB-INF/lib/
+Spring-Boot-Classpath-Index: WEB-INF/classpath.idx
+Spring-Boot-Layers-Index: WEB-INF/layers.idx
+Build-Jdk-Spec: 17
+Implementation-Title: MyTrip
+Implementation-Version: MyTrip_0.0.1
+

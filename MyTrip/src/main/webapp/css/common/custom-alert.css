@@ -1,0 +1,263 @@
+/* 공통 Alert 팝업 스타일 */
+.custom-alert-overlay {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-alert-popup {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    min-width: 320px;
+    max-width: 480px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.custom-alert-header {
+    position: relative;
+    padding: 20px 40px 0px 20px;
+}
+
+.custom-alert-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 1.5rem;
+    color: #6b7280;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.custom-alert-close:hover {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.custom-alert-content {
+    padding: 8px 20px 20px 20px;
+    text-align: center;
+}
+
+.custom-alert-message {
+    font-size: 1.1rem;
+    color: #374151;
+    line-height: 1.6;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    word-break: keep-all;
+}
+
+.custom-alert-button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.custom-alert-button:hover {
+    background: #1d4ed8;
+}
+
+/* 커스텀 Confirm 팝업 스타일 */
+.custom-confirm-overlay {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-confirm-popup {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    min-width: 320px;
+    max-width: 480px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.custom-confirm-header {
+    position: relative;
+    padding: 20px 40px 0px 20px;
+}
+
+.custom-confirm-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 1.5rem;
+    color: #6b7280;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.custom-confirm-close:hover {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.custom-confirm-content {
+    padding: 8px 20px 20px 20px;
+    text-align: center;
+}
+
+.custom-confirm-message {
+    font-size: 1.1rem;
+    color: #374151;
+    line-height: 1.6;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    word-break: keep-all;
+    white-space: normal;
+}
+
+.custom-confirm-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.custom-confirm-cancel-btn {
+    flex: 1;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 2px solid #e5e7eb;
+    background: #fff;
+    color: #6b7280;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.custom-confirm-cancel-btn:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+    color: #374151;
+}
+
+.custom-confirm-ok-btn {
+    flex: 1;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.custom-confirm-ok-btn:hover {
+    background: #1d4ed8;
+}
+
+/* 애니메이션 효과 */
+.custom-alert-overlay,
+.custom-confirm-overlay {
+    animation: fadeIn 0.2s ease-out;
+}
+
+.custom-alert-popup,
+.custom-confirm-popup {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+}
+
+/* 커스텀 라디오 그룹 */
+.custom-radio-group {
+    margin: 16px 0 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.custom-radio-label {
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.custom-radio-label input[type="radio"] {
+    accent-color: #2563eb;
+    margin-right: 4px;
+} 
